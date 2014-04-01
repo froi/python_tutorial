@@ -7,6 +7,7 @@ def my_contact():
 		G+: https://plus.google.com/+FroilanIrizarry
 		LinkedIn: https://www.linkedin.com/in/froilanirizarry
 		FB: https://www.facebook.com/irizarry.froilan
+		Presentation: https://speakerdeck.com/froi/python-for-beginners-in-python
 	'''
 
 def fin():
