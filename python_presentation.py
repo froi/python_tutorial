@@ -1,14 +1,19 @@
 import python_ascii
 import playing_w_date_time
+import present_end
 
 def what_is_python():
 	print "What is Python?"
 	raw_input()
 
-	print "\tSnake?"
+	print "\tA snake?"
+	raw_input()
+	print "\t\tYes but no."
 	raw_input()
 
 	print "\tMonty Python?"
+	raw_input()
+	print "\t\tAwesome but still not what we are talking about."
 	raw_input()
 
 	print "\tPython is an interpreted, object-oriented, high-level programming language with dynamic semantics."
@@ -16,19 +21,21 @@ def what_is_python():
 
 	print "\tInterpreted?"
 	raw_input()
-
-	print "\t\tYou write a statement it executes it."
+	print "\t\tThis means that a program named an interpreter executes statements as it find them in a file or command line."
 	raw_input()
 
-	print 'you@comp$ python'
-	print '>>> '
+	print '''Try it for yourself! In your command line terminal execute the following:
+	\tyou@comp$ python
+	\t>>>
+	To exit the interpreter or REPL just type ctrl/control c
+	'''
 	raw_input()
 
 def python_syntax():
 	print "Python syntax"
 	raw_input()
 
-	print "\tHello World...Nah!" 
+	print "\tHello World...Nah!"
 	raw_input()
 
 	python_ascii.hello_python()
@@ -47,17 +54,17 @@ def python_syntax():
 		our_var= 9
 	'''
 	raw_input()
-	
+
 	print 'Statements and Whitespace'
 	raw_input()
-	
+
 	print '\tThis is a statement: a = 23'
 	print '\tThis is also a statement if a:'
 	raw_input()
-	
+
 	print '\tWhitespace matters!!!'
 	raw_input()
-	
+
 	print '''
 		if a:'
 		x="BAM!"
@@ -66,7 +73,7 @@ def python_syntax():
 			IndentationError: expected an indented block
 	'''
 	raw_input()
-	
+
 	print '''
 		if a:'
 			x="BAM!"
@@ -83,7 +90,7 @@ def python_syntax():
 		BOOM! Same problem as above...
 	'''
 	raw_input()
-	
+
 	print '''
 		def my_method():
 			a = 4
@@ -95,17 +102,17 @@ def python_syntax():
 
 	print '\tif a:'
 	raw_input()
-	
+
 	print 'Comments'
 	raw_input()
-	
+
 	print '\tSingle line: # This is a comment.'
 	raw_input()
-	
-	print '''Multiline: 
-	\'\'\' 
+
+	print '''Multiline:
+	\'\'\'
 		This is also a comment, but only if it's not the first line in a method, class, or module.
-	\'\'\' 
+	\'\'\'
 	'''
 	raw_input()
 
@@ -143,20 +150,20 @@ def python_strings():
 
 	print '\tsimple_string = "Hello I am a simple string!"'
 	raw_input()
-	
+
 	print '''
 		Escaping
 			simple_string2 = 'Hello I\'m alse a simple string!'
 	'''
 	raw_input()
-	
+
 	print '\tstrings by offset'
 	print '\t\t"Python"[3] -> ', 'Python'[3]
 	raw_input()
 
 	print '\t\tWhat would be the output for this "Monty Python"[6]'
 	raw_input()
-	
+
 	print 'Monty Python'[6]
 	raw_input()
 
@@ -165,7 +172,7 @@ def python_strings():
 
 	print 'len()'
 	print '\tlen("supercalifragilisticexpialidocioua") -> ', len('supercalifragilisticexpialidocioua')
-	print 'len can also take as arguments other data types and structures', 
+	print 'len can also take as arguments other data types and structures',
 	raw_input()
 
 	print 'upper() - dot notation is used with this methods because it only applies to strings!'
@@ -180,7 +187,7 @@ def python_strings():
 	raw_input()
 	try:
 		print '\tprint str(2) + 2 -> ', str(2) + 2
-	except: 
+	except:
 		print 'TypeError: cannot concatenate \'str\' and \'int\' objects'
 	print '\tprint str(2) + str(2) -> ', str(2) + str(2)
 	raw_input()
@@ -264,13 +271,13 @@ def python_conditionals():
 def python_control_flow():
 	print '\tif else elif'
 	raw_input()
-	
+
 	print '\t\tif True :'
 	print '\t\t\tsomething'
 	print '\t\telse:'
 	print '\t\t\tsomething'
 	raw_input()
-	
+
 	print '\t\tnum = 0'
 	print '\t\t\tif num == 5:'
 	print '\t\t\tsomething'
@@ -537,7 +544,7 @@ def python_input_output():
 
 	print '''
 		Opening a file and printing out all it's content:
-			
+
 			with open('/home/user/file.txt', 'r') as f:
 				print f.read()
 
@@ -566,3 +573,59 @@ def python_important_links():
 		http://learnpython.org
 		http://www.twitter.com/pr_pig
 	'''
+
+def present_fin():
+	present_end.my_contact()
+	present_end.fin()
+
+keep_going = True
+
+while keep_going:
+	print """Select what you want to learn:
+		1. What is Python?
+		2. The Python Syntax
+		3. Python Data Types
+		4. Python and Math
+		5. Python Strings
+		6. Python Imports
+		7. Python Datetime
+		8. Python Conditionals
+		9. Python Control Flow
+		10. Python Functions
+		11. Python Data Structure
+		12. Python Loops
+		13. Python Input and Output
+		14. Python Important Links
+		15. Fin
+	"""
+	options = {
+		1 : what_is_python,
+		2 : python_syntax,
+		3 : python_data_types,
+		4 : python_math,
+		5 : python_strings,
+		6 : python_imports,
+		7 : python_date_time,
+		8 : python_conditionals,
+		9 : python_control_flow,
+		10 : python_functions,
+		11 : python_data_structs,
+		12 : python_loops,
+		13 : python_input_output,
+		14 : python_important_links,
+		15 : present_fin,
+	}
+
+	choice = raw_input('Enter your choice: ')
+	try:
+		choice = int(choice)
+
+		if choice > 15 or choice < 1:
+			print "Please enter a valid option (1 - 15)"
+		else:
+			options[choice]()
+	except:
+		print "Please enter a valid option (1 - 15)"
+	finally:
+		if choice == 15:
+			keep_going = False

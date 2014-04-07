@@ -1,5 +1,5 @@
 def my_contact():
-	print ''''
+	print '''
 		Contacts:
 		irizarry.froilan@gmail.com
 		Github: https://github.com/froi
@@ -20,6 +20,6 @@ def fin():
 		*          *  *  *    *  *
 		*******    *  *   *   *  *
 		*          *  *    *  *  *
-		*          *  *     * *   
+		*          *  *     * *
 		*          *  *       *  *
 	'''
